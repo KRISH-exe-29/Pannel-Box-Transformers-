@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0F172A;
+    color: #F8FAFC;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#1E293B] border border-[#334155] rounded-lg p-6;
+  }
+  .input-field {
+    @apply w-full bg-[#0F172A] border border-[#334155] rounded-lg px-4 py-2.5 text-[#F8FAFC] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-[#F59E0B] transition-colors;
+  }
+  .btn-primary {
+    @apply bg-[#F59E0B] text-[#0F172A] font-semibold px-6 py-2.5 rounded-lg hover:bg-[#D97706] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2;
+  }
+  .btn-secondary {
+    @apply border border-[#F59E0B] text-[#F59E0B] font-medium px-6 py-2.5 rounded-lg hover:bg-[#F59E0B]/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2;
+  }
+  .btn-danger {
+    @apply bg-red-500 text-white font-medium px-6 py-2.5 rounded-lg hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2;
+  }
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+}
