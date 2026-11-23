@@ -1,15 +1,23 @@
 # RTCC Panel & Marshaling Box Tracking System
 
-An internal industrial tracking tool for Indo Tech Transformers Industries to manage the inspection, testing, and clearance lifecycle of RTCC panels and Marshaling boxes.
+Indo Tech Transformers uses this to track every RTCC panel and marshaling box through inspection, testing and clearance. Departments get an automatic follow-up email when pending points sit open.
 
-## Features
-- **Role-Based Access**: Separate user and admin interfaces.
-- **Workflow Tracking**: Step-by-step date tracking for each stage of inspection.
-- **Pending Points Management**: Dynamic pending points tracking at the receiving stage.
-- **Action Complaints**: Track and manage drawing and schematic complaints.
-- **Automated Emails**: Follow-up email automation after 48 hours.
-- **Manual Reminders**: Trigger emails to departments immediately when pending points are not approved.
-- **Admin Settings**: Manage email recipients directly from the UI without code changes.
+- Record the date each panel or box clears each inspection stage.
+- List pending points at receiving and see which are still open.
+- Log drawing and schematic complaints and follow each one to closure.
+- Departments get a follow-up email automatically after 48 hours, and you can send a reminder right away when points are not approved.
+- Admins change email recipients from the settings screen, with no code edits.
+- Users and admins get separate views.
+
+## Quick start
+
+```bash
+git clone https://github.com/KRISH-exe-29/Pannel-Box-Transformers-.git && cd Pannel-Box-Transformers-
+npm run install:all
+npm run dev     # client on http://localhost:5173, server on http://localhost:5000
+```
+
+Before the first run, create a Supabase project, run the SQL files in `supabase/migrations/` in its SQL editor, and add `server/.env` and `client/.env` as shown in [Environment Variables](#2-environment-variables).
 
 ## Tech Stack
 - **Frontend**: React, Vite, Tailwind CSS v3, Lucide React icons
